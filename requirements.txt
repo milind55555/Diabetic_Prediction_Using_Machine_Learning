@@ -1,0 +1,20 @@
+seaborn==0.9.0
+Flask==1.0.2
+# Use a matplotlib release which provides pre-built wheels for Windows/Python 3.8
+# (avoids building freetype/libpng from source during pip install)
+matplotlib==3.3.4
+# Use a pandas release that provides pre-built wheels for Windows/Python 3.8
+# (avoids building from source). Keep a compatible numpy that also has wheels.
+pandas==1.1.5
+# numpy bumped to a 1.19.x release which is compatible with pandas 1.1.5
+# and provides pre-built wheels for Python 3.8 on Windows.
+numpy==1.19.5
+# correct package name: scikit-learn (hyphen)
+# Use a scikit-learn version with pre-built wheels for Python 3.8 on Windows
+# (avoids compiling C extensions and requiring MSVC build tools)
+scikit-learn==0.24.2
+# Flask 1.0.2 expects older Jinja2/MarkupSafe APIs (Markup exported from jinja2).
+# Newer Jinja2/MarkupSafe releases are incompatible — pin them so Flask 1.0.2 works.
+Jinja2==2.11.3
+MarkupSafe==1.1.1
+itsdangerous==1.1.0
